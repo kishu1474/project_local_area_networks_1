@@ -1,0 +1,60 @@
+# Question - 1:
+
+Locate the frame transmitted from etherinj and list the values of all fields of the captured
+Ethernet frame that carries the “Hello, World” message.
+
+# Answer - 1:
+
+0000 08 00 27 c7 8c f6 08 00 27 7b cb 75 00 2e 48 65
+0010 6c 6c 6f 2c 20 57 6f 72 6c 64 00 00 00 00 00 00
+0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0030 00 00 00 00 00 00 00 00 00 00 00 00
+
+Destination Address:      08 00 27 c7 8c f6
+Source Address:           08 00 27 7b cb 75
+Type or Length of Frame:  02E
+
+
+# Question 2:
+
+Can you run etherin and ethercap without using sudo?
+
+# Answer - 2:
+
+No.
+
+
+# Question - 3:
+
+Explain from the computer security perspective, why does Linux require you to run such programs using a special permission, such as using sudo?
+
+# Answer - 3:
+
+The sudo command allows you to run programs with the security privileges of another user (by default, as the superuser). It prompts you for your personal password and confirms your request to execute a command by checking a file, called sudoers, which the system administrator configures. Using the sudoers file, system administrators can give certain users or groups access to some or all commands without those users having to know the root password. It also logs all commands and arguments so there is a record of who used it for what, and when.
+
+
+# 3.2 :
+
+Explain the difference among Ethernet unicast, broadcast, and multicast addresses, and describe
+the examples and observations in the report.
+
+# Explanation :
+
+1. Unicast :–
+This type of information transfer is useful when there is a participation of single sender and single recipient. So, in short you can term it as a one-to-one transmission. For example, a device having IP address 10.1.2.0 in a network wants to send the data packets to the device with IP address 20.12.4.2 in the other network,then unicast comes into picture. This is the most common form of data transfer over the networks.
+
+2. Broadcast –
+Broadcasting transfer (one-to-all) techniques can be classified into two types :
+
+Limited Broadcasting –
+Suppose you have to send stream of packets to all the devices over the network that you reside, this broadcasting comes handy. For this to achieve,it will append 255.255.255.255 (all the 32 bits of IP address set to 1) called as Limited Broadcast Address in the destination address of the packet header which is reserved for information tranfer to all the recipients from a single sender over the network.
+
+Direct Broadcasting –
+This is useful when a device in one network wants to transfer packet stream to all the devices over the other network.This is achieved by translating all the Host ID part bits of the destination address to 1,referred as Direct Broadcast Address in the packet header for information transfer.
+
+3. Multicast –
+In multicasting, one/more senders and one/more recipients participate in data transfer traffic. In this method traffic recline between the boundaries of unicast (one-to-one) and broadcast (one-to-all). Multicast lets server’s direct single copies of data streams that are then simulated and routed to hosts that request it. IP multicast requires support of some other protocols like IGMP (Internet Group Management Protocol), Multicast routing for its working. Also in Classful IP addressing Class D is reserved for multicast groups.
+
+
+
+
